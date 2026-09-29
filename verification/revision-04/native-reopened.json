@@ -1,0 +1,57 @@
+{
+  "path": "C:\\Users\\adigh\\OneDrive\\Documents\\ChatGPT\\ngoro-digital-twin\\outputs\\NGORO_Detailed_SU2023.skp",
+  "version": "23.1.340",
+  "reopened": true,
+  "elements": 9972,
+  "missing_ids": [
+
+  ],
+  "extra_ids": [
+
+  ],
+  "duplicate_ids": 0,
+  "nonmanifold": 0,
+  "embedded_textures": [
+    {
+      "name": "NGORO concrete",
+      "width": 2048,
+      "height": 1024
+    },
+    {
+      "name": "NGORO floor",
+      "width": 2048,
+      "height": 1024
+    },
+    {
+      "name": "NGORO asphalt",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "NGORO plaster",
+      "width": 2048,
+      "height": 1024
+    },
+    {
+      "name": "NGORO roof",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "NGORO wood",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "name": "NGORO bark",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "scenes": 8,
+  "stair_top_m": 3.9000000000000004,
+  "upper_ffl_m": 3.8999999999999995,
+  "landing_top_m": 3.8999999999999995,
+  "modified": false,
+  "pass": true
+}

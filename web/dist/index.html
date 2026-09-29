@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#eae8df"><meta name="description" content="Eksplorasi 3D kawasan NGORO berdasarkan gambar DWG. Tiga gudang, kantor dua lantai, sosoran dan tapak.">
+ <title>NGORO — Eksplorasi 3D</title><link rel="stylesheet" href="style.css">
+ <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+ <main id="viewport" aria-label="Model tiga dimensi kawasan NGORO"><canvas id="scene" aria-label="Model 3D. Seret untuk memutar, gulir untuk memperbesar." tabindex="0"></canvas></main>
+ <header><a class="brand" href="./" aria-label="NGORO tampilan awal"><span class="monogram">N<span>°</span></span><span>NGORO<small>INDUSTRIAL ESTATE</small></span></a><div class="project-meta"><span>STUDI ARSITEKTUR</span><span>90 × 80 M <i></i> 03 GUDANG</span></div><button id="info" class="circle" aria-label="Informasi model">i</button></header>
+ <section id="loading" aria-live="polite"><span class="loading-mark">N°</span><p>Menyiapkan kawasan</p><div class="track"><span id="progress"></span></div><small id="load-detail">Geometri dan material</small></section>
+ <section class="view-caption" aria-live="polite"><span class="eyebrow">NGORO / <span id="view-no">01</span></span><h1 id="view-title">Keseluruhan tapak</h1><p id="view-detail">Tiga gudang. Satu kawasan.</p></section>
+ <aside class="controls" aria-label="Pengaturan tampilan">
+  <div class="control-heading"><span>TAMPILAN</span><button id="collapse" aria-label="Ciutkan pengaturan" aria-expanded="true">−</button></div>
+  <div id="settings"><label for="view">Sudut pandang</label><select id="view"><option value="overview">Keseluruhan</option><option value="front">Gerbang & fasad</option><option value="office">Kantor</option><option value="warehouse">Interior gudang</option><option value="officeInside">Interior kantor</option><option value="shed">Sosoran</option><option value="top">Denah tapak</option></select>
+   <div class="divider"></div><div class="row"><span>Atap</span><button class="switch" id="roof" role="switch" aria-checked="true" aria-label="Tampilkan atap"><span></span></button></div>
+   <div class="row"><span>Isi gudang</span><button class="switch" id="interiors" role="switch" aria-checked="true" aria-label="Tampilkan isi gudang"><span></span></button></div>
+   <label for="walk-mode">Jelajah kawasan</label><select id="walk-mode"><option value="orbit">Orbit model</option><option value="third">Orang ketiga · karakter</option><option value="first">Orang pertama</option></select>
+   <div class="divider"></div><span class="control-label">BUKA / TUTUP</span>
+   <div class="row"><span>Gerbang utama</span><button class="switch" id="toggle-gate-main" role="switch" aria-checked="false" aria-label="Buka gerbang utama"><span></span></button></div>
+   <div class="row"><span>Pintu Gudang 1</span><button class="switch" id="toggle-door-1" role="switch" aria-checked="false" aria-label="Buka pintu Gudang 1"><span></span></button></div>
+   <div class="row"><span>Pintu Gudang 2</span><button class="switch" id="toggle-door-2" role="switch" aria-checked="false" aria-label="Buka pintu Gudang 2"><span></span></button></div>
+   <div class="row"><span>Pintu Gudang 3</span><button class="switch" id="toggle-door-3" role="switch" aria-checked="false" aria-label="Buka pintu Gudang 3"><span></span></button></div>
+   <label for="time">Cahaya</label><div class="segmented" id="time"><button data-time="day" class="active" aria-pressed="true">Siang</button><button data-time="dusk" aria-pressed="false">Senja</button></div>
+   <label for="quality">Kualitas</label><select id="quality"><option value="auto">Adaptif</option><option value="high">Tinggi</option><option value="low">Ringan</option></select><small id="quality-note">Menyesuaikan perangkat</small>
+  </div>
+ </aside>
+ <footer><span class="hint" id="hint">SERET untuk memutar <b>·</b> GULIR untuk zoom</span><div class="tools"><button id="reset" aria-label="Kembali ke tampilan awal">↺ <span>Reset</span></button><button id="capture" aria-label="Simpan gambar model">↗ <span>Simpan gambar</span></button><button id="fullscreen" aria-label="Layar penuh">⛶</button></div><span class="scale">BERDASARKAN NGORO.send.dwg</span></footer>
+ <dialog id="details"><button class="close" aria-label="Tutup informasi">×</button><span class="eyebrow">CATATAN MODEL</span><h2>Dari gambar ke ruang.</h2><p>Denah, ukuran tapak, tiga gudang, sosoran, kantor, pos dan posisi parkir mengikuti DWG. Material, isi ruang, bukaan fasad, tangga kantor dan lanskap melengkapi studi visual ini.</p><dl><div><dt>Tapak</dt><dd>90 × 80 m</dd></div><div><dt>Gudang</dt><dd>3 × (23 × 60 m)</dd></div><div><dt>Sosoran</dt><dd>15 × 60 m</dd></div><div><dt>Kantor</dt><dd>6 × 12 m · 2 lantai</dd></div></dl><p class="muted">Bagian yang tidak ditentukan gambar merupakan interpretasi. Ukuran profil mengikuti anotasi; sambungan dan fondasi bukan dokumen perhitungan struktur.</p><a class="download" href="downloads/NGORO_Detailed_SU2023.skp" download>Unduh model SketchUp 2023 ↓</a><a class="notes-link" href="model-notes.html" target="_blank" rel="noopener">Asumsi & sumber material ↗</a></dialog>
+ <section id="walk-hud" aria-label="Kontrol jelajah"><div id="joystick" aria-label="Joystick gerak sentuh"><span id="joystick-knob"></span></div><div class="walk-actions"><button id="interact" disabled>Dekati pintu · E</button><button id="exit-walk">Keluar jelajah · Esc</button><p id="walk-status" aria-live="polite">WASD / joystick · seret untuk melihat</p></div><span class="crosshair" aria-hidden="true">+</span></section>
+ <script type="module" src="app.js"></script>
+</body></html>
+

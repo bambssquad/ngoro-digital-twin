@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.bamloop/
+.openai/
+web/.git/
+web/.openai/
+*.log
+*.skb
+*.bak
+
