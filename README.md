@@ -2,7 +2,7 @@
 
 Model kawasan tiga gudang dari NGORO.send.dwg, dengan viewer Three.js dan file SketchUp 2023.
 
-[Buka viewer](https://ngoro-digital-twin.takashimurachan.chatgpt.site/) · [File SKP](web/dist/downloads/NGORO_Detailed_SU2023.skp)
+[Buka viewer](https://bambssquad.github.io/ngoro-digital-twin/) · [File SKP](web/dist/downloads/NGORO_Detailed_SU2023.skp)
 
 ## Revisi terkini
 
@@ -38,5 +38,5 @@ Revisi 04: 9.972 elemen, file SKP dibuka ulang dengan nol solid nonmanifold. Vie
 
 Tekstur ambientCG memakai CC0; atribusi ada di `web/dist/assets/material-sources.json`. Lisensi Three.js ada di `web/dist/vendor/LICENSE-three.txt`.
 
-Repositori privat. Hosting yang aktif tetap menggunakan Sites; unggahan ini tidak mengaktifkan GitHub Pages.
+Repositori publik. Web diterbitkan ke GitHub Pages dari `web/dist` melalui `.github/workflows/pages.yml`; perubahan web pada branch `main` akan diterbitkan otomatis.
 
