@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,hashlib,re,subprocess
+import json,hashlib,re,subprocess,urllib.request
 from xml.etree import ElementTree as ET
 root=Path(__file__).resolve().parents[1]
 manifest=json.loads((root/'web/dist/assets/drawings/manifest.json').read_text(encoding='utf-8'))
@@ -7,7 +7,9 @@ assert len(manifest['sheets'])==12
 assert sum(s['kind']=='source' for s in manifest['sheets'])==7
 assert manifest['source_inventory']['entities']==5053
 assert manifest['source_inventory']['dimensions']==204
-assert manifest['source_sha256']==hashlib.sha256((root/'analysis/NGORO.source.dwg').read_bytes()).hexdigest()
+source=root/'analysis/NGORO.source.dwg'
+if not source.exists():source=root/'web/dist/downloads/NGORO.source.dwg'
+assert manifest['source_sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
 assert manifest['model_sha256']==hashlib.sha256((root/'web/dist/assets/scene.json').read_bytes()).hexdigest()
 checks=[]
 for s in manifest['sheets']:
@@ -21,7 +23,9 @@ for s in manifest['sheets']:
   assert all(not k.lower().startswith('on') for k in e.attrib)
  checks.append({'id':s['id'],'bytes':p.stat().st_size,'layers':len(layers),'passed':True})
 for f in ['app.js','drawings.js']:subprocess.run(['node','--check',str(root/'web/dist'/f)],check=True,capture_output=True)
-before=(root/'verification/revision-05/app-before.js').read_bytes();after=(root/'web/dist/app.js').read_bytes()
+baseline=root/'verification/revision-05/app-before.js'
+before=baseline.read_bytes() if baseline.exists() else urllib.request.urlopen('https://raw.githubusercontent.com/bambssquad/ngoro-digital-twin/322c2a67a7661d6544a1a5c8660c2756f038a230/web/dist/app.js').read()
+after=(root/'web/dist/app.js').read_bytes()
 assert after==before.replace(b'previous=now;if(transition',b'previous=now;if(state.drawingMode){last=now;frames=0;return;}if(transition',1)
 browser=json.loads((root/'verification/revision-05/browser-tests.json').read_text())
 assert all(s['ready'] and not s['errors'] for s in browser['sheets'])
@@ -41,3 +45,4 @@ for name in files:
  payload.append({'path':name,'size':len(b),'sha':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()})
 (root/'verification/revision-05/upload-manifest.json').write_text(json.dumps(payload,indent=2))
 print('PASS:',len(checks),'sheets; source/model unchanged; browser checks; selected',len(payload),'files for publication.')
+
