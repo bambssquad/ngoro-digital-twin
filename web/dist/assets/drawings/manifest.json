@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "source": "NGORO.send.dwg",
+  "source_sha256": "b764b3c6bb24ce8b9800cd083f168f1c4bc46b8202633513acb40dd9e455f035",
+  "model_revision": 4,
+  "model_sha256": "3af763b2bdbd71d0ad5a91405926b7462d68ae5ed9402f8eeede034afc08d539",
+  "sheets": [
+    {
+      "id": "source-all",
+      "title": "Semua gambar DWG",
+      "kind": "source",
+      "url": "assets/drawings/source-all.svg",
+      "description": "Keseluruhan Model Space, termasuk denah, rencana struktur, atap dan profil rangka.",
+      "layers": [
+        "0",
+        "A",
+        "As Atap",
+        "Atap",
+        "GR",
+        "GRS-TIPIS",
+        "Garis Dim",
+        "HAT",
+        "HELP",
+        "KOP TEKS",
+        "Layer2",
+        "Pondasi",
+        "SUNGAI",
+        "TANGGA",
+        "TEXT",
+        "WF 150"
+      ],
+      "source_bounds": [
+        2488.812905769173,
+        1467.633848104519,
+        3311.834041589902,
+        1582.725531319179
+      ]
+    },
+    {
+      "id": "source-site",
+      "title": "Siteplan asli",
+      "kind": "source",
+      "url": "assets/drawings/source-site.svg",
+      "description": "Siteplan dan dimensi dari DWG sumber.",
+      "layers": [
+        "0",
+        "KOP TEKS"
+      ],
+      "source_bounds": [
+        2490,
+        1467,
+        2649,
+        1582
+      ]
+    },
+    {
+      "id": "source-layout",
+      "title": "Layout plan asli",
+      "kind": "source",
+      "url": "assets/drawings/source-layout.svg",
+      "description": "Layout plan dan keterangan parkir dari DWG sumber.",
+      "layers": [
+        "0",
+        "Atap",
+        "KOP TEKS"
+      ],
+      "source_bounds": [
+        2653,
+        1467,
+        2813,
+        1582
+      ]
+    },
+    {
+      "id": "source-foundation",
+      "title": "Rencana pondasi asli",
+      "kind": "source",
+      "url": "assets/drawings/source-foundation.svg",
+      "description": "Rencana pondasi dan sloof sesuai anotasi sumber; belum merupakan verifikasi struktur.",
+      "layers": [
+        "0",
+        "GR",
+        "GRS-TIPIS",
+        "Garis Dim",
+        "KOP TEKS",
+        "Pondasi"
+      ],
+      "source_bounds": [
+        2818,
+        1488,
+        2948,
+        1582
+      ]
+    },
+    {
+      "id": "source-columns",
+      "title": "Rencana kolom asli",
+      "kind": "source",
+      "url": "assets/drawings/source-columns.svg",
+      "description": "Rencana kolom, grid dan anotasi profil sesuai DWG.",
+      "layers": [
+        "0",
+        "GR",
+        "GRS-TIPIS",
+        "Garis Dim",
+        "KOP TEKS",
+        "Pondasi"
+      ],
+      "source_bounds": [
+        2951,
+        1488,
+        3080,
+        1582
+      ]
+    },
+    {
+      "id": "source-roof",
+      "title": "Rencana atap asli",
+      "kind": "source",
+      "url": "assets/drawings/source-roof.svg",
+      "description": "Susunan rangka dan gording dari DWG.",
+      "layers": [
+        "0",
+        "Atap",
+        "GR",
+        "GRS-TIPIS",
+        "HAT",
+        "HELP",
+        "KOP TEKS",
+        "Pondasi"
+      ],
+      "source_bounds": [
+        3084,
+        1488,
+        3214,
+        1582
+      ]
+    },
+    {
+      "id": "source-frame",
+      "title": "Profil rangka asli",
+      "kind": "source",
+      "url": "assets/drawings/source-frame.svg",
+      "description": "Profil melintang rangka dari DWG; judul lembar ini ditambahkan untuk navigasi.",
+      "layers": [
+        "0",
+        "A",
+        "As Atap",
+        "GR",
+        "Garis Dim",
+        "Layer2",
+        "SUNGAI",
+        "TANGGA",
+        "TEXT",
+        "WF 150"
+      ],
+      "source_bounds": [
+        3220,
+        1528,
+        3325,
+        1553
+      ]
+    },
+    {
+      "id": "derived-plan",
+      "title": "Denah bersih + garis potongan",
+      "kind": "derived",
+      "url": "assets/drawings/derived-plan.svg",
+      "description": "Turunan model revisi 04; potongan horizontal +1.20 m dari datum tapak.",
+      "layers": [
+        "Anotasi",
+        "Dimensi",
+        "Gerbang utama",
+        "Gudang 1",
+        "Gudang 2",
+        "Gudang 3",
+        "Kantor",
+        "Kendaraan",
+        "Pagar depan",
+        "Pintu Gudang 1",
+        "Pintu Gudang 2",
+        "Pintu Gudang 3",
+        "Pos",
+        "Potongan",
+        "Tangga",
+        "Tapak"
+      ]
+    },
+    {
+      "id": "derived-front",
+      "title": "Tampak akses utama",
+      "kind": "derived",
+      "url": "assets/drawings/derived-front.svg",
+      "description": "Proyeksi ortogonal model 3D; bukaan, atap dan pagar mengikuti revisi 04.",
+      "layers": [
+        "Atap",
+        "Datum",
+        "Dimensi",
+        "Gerbang utama",
+        "Gudang 1",
+        "Gudang 2",
+        "Gudang 3",
+        "Kantor",
+        "Kendaraan",
+        "Pagar depan",
+        "Parkir",
+        "Pintu Gudang 1",
+        "Pintu Gudang 2",
+        "Pintu Gudang 3",
+        "Pondasi",
+        "Pos",
+        "Sosoran",
+        "Struktur",
+        "Tangga"
+      ]
+    },
+    {
+      "id": "derived-side",
+      "title": "Tampak samping timur",
+      "kind": "derived",
+      "url": "assets/drawings/derived-side.svg",
+      "description": "Proyeksi ortogonal model 3D; bukaan, atap dan pagar mengikuti revisi 04.",
+      "layers": [
+        "Atap",
+        "Datum",
+        "Dimensi",
+        "Gerbang utama",
+        "Gudang 1",
+        "Gudang 2",
+        "Gudang 3",
+        "Kantor",
+        "Kendaraan",
+        "Pagar depan",
+        "Parkir",
+        "Pintu Gudang 1",
+        "Pintu Gudang 2",
+        "Pintu Gudang 3",
+        "Pondasi",
+        "Pos",
+        "Sosoran",
+        "Struktur",
+        "Tangga"
+      ]
+    },
+    {
+      "id": "derived-section-a",
+      "title": "Potongan A–A melintang",
+      "kind": "derived",
+      "url": "assets/drawings/derived-section-a.svg",
+      "description": "Bidang potong Y = 34.00 m; solid terpotong ditampilkan. Dari model revisi 04.",
+      "layers": [
+        "Anotasi",
+        "Atap",
+        "Datum",
+        "Dimensi",
+        "Gudang 1",
+        "Gudang 2",
+        "Gudang 3",
+        "Pondasi",
+        "Sosoran",
+        "Struktur",
+        "Tapak"
+      ]
+    },
+    {
+      "id": "derived-section-b",
+      "title": "Potongan B–B memanjang",
+      "kind": "derived",
+      "url": "assets/drawings/derived-section-b.svg",
+      "description": "Bidang potong X = 75.50 m; solid terpotong ditampilkan. Dari model revisi 04.",
+      "layers": [
+        "Anotasi",
+        "Atap",
+        "Datum",
+        "Dimensi",
+        "Gudang 1",
+        "Pagar depan",
+        "Pintu Gudang 1",
+        "Pondasi",
+        "Struktur",
+        "Tapak"
+      ]
+    }
+  ],
+  "notes": [
+    "CAD asli berasal dari DWG melalui DXF AutoCAD, dirender sebagai vektor hanya-baca. Bentuk huruf dapat berbeda dari font CAD asli.",
+    "Layout kertas DWG kosong; lembar sumber diambil dari kelompok gambar di Model Space.",
+    "Gambar turunan mengikuti model revisi 04. Dimensi model yang direvisi tidak mengubah gambar sumber.",
+    "Gambar turunan untuk studi visual dan koordinasi, bukan dokumen pelaksanaan atau perhitungan struktur."
+  ],
+  "source_inventory": {
+    "entities": 5053,
+    "dimensions": 204,
+    "model_types": {
+      "LWPOLYLINE": 689,
+      "DIMENSION": 204,
+      "MTEXT": 187,
+      "INSERT": 144,
+      "LINE": 3651,
+      "CIRCLE": 26,
+      "HATCH": 6,
+      "XLINE": 7,
+      "ARC": 103,
+      "POINT": 36
+    },
+    "paper_layouts": {
+      "Layout1": 0,
+      "Layout2": 0
+    },
+    "omitted": "7 infinite construction XLINE objects omitted; hidden and non-plot layers follow renderer visibility"
+  }
+}

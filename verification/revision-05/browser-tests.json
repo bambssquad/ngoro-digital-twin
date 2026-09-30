@@ -1,0 +1,255 @@
+{
+  "sheets": [
+    {
+      "id": "source-all",
+      "ready": true,
+      "paths": 8271,
+      "errors": []
+    },
+    {
+      "id": "source-site",
+      "ready": true,
+      "paths": 192,
+      "errors": []
+    },
+    {
+      "id": "source-layout",
+      "ready": true,
+      "paths": 214,
+      "errors": []
+    },
+    {
+      "id": "source-foundation",
+      "ready": true,
+      "paths": 1447,
+      "errors": []
+    },
+    {
+      "id": "source-columns",
+      "ready": true,
+      "paths": 1023,
+      "errors": []
+    },
+    {
+      "id": "source-roof",
+      "ready": true,
+      "paths": 2517,
+      "errors": []
+    },
+    {
+      "id": "source-frame",
+      "ready": true,
+      "paths": 2879,
+      "errors": []
+    },
+    {
+      "id": "derived-plan",
+      "ready": true,
+      "paths": 269,
+      "errors": []
+    },
+    {
+      "id": "derived-front",
+      "ready": true,
+      "paths": 1823,
+      "errors": []
+    },
+    {
+      "id": "derived-side",
+      "ready": true,
+      "paths": 1893,
+      "errors": []
+    },
+    {
+      "id": "derived-section-a",
+      "ready": true,
+      "paths": 90,
+      "errors": []
+    },
+    {
+      "id": "derived-section-b",
+      "ready": true,
+      "paths": 46,
+      "errors": []
+    }
+  ],
+  "interaction": {
+    "beforePan": {
+      "result": {
+        "type": "object",
+        "value": {
+          "errors": [],
+          "hiddenLayers": [],
+          "layers": [
+            "Anotasi",
+            "Atap",
+            "Datum",
+            "Dimensi",
+            "Gudang 1",
+            "Gudang 2",
+            "Gudang 3",
+            "Pondasi",
+            "Sosoran",
+            "Struktur",
+            "Tapak"
+          ],
+          "mode": "sheets",
+          "ready": true,
+          "sheet": "derived-section-a",
+          "svgPaths": 90,
+          "viewBox": [
+            -257.65115173305117,
+            -42.400000000000034,
+            1715.3023034661023,
+            932.8
+          ],
+          "zoom": 1
+        }
+      }
+    },
+    "afterPan": {
+      "result": {
+        "type": "object",
+        "value": {
+          "errors": [],
+          "hiddenLayers": [],
+          "layers": [
+            "Anotasi",
+            "Atap",
+            "Datum",
+            "Dimensi",
+            "Gudang 1",
+            "Gudang 2",
+            "Gudang 3",
+            "Pondasi",
+            "Sosoran",
+            "Struktur",
+            "Tapak"
+          ],
+          "mode": "sheets",
+          "ready": true,
+          "sheet": "derived-section-a",
+          "svgPaths": 90,
+          "viewBox": [
+            -426.3526478425283,
+            -134.41899787789666,
+            1715.3023034661023,
+            932.8
+          ],
+          "zoom": 1
+        }
+      }
+    },
+    "layersOff": {
+      "result": {
+        "type": "object",
+        "value": {
+          "hidden": 10,
+          "total": 10,
+          "visible": 0
+        }
+      }
+    },
+    "zoom": {
+      "result": {
+        "type": "object",
+        "value": {
+          "errors": [],
+          "hiddenLayers": [],
+          "layers": [
+            "Anotasi",
+            "Atap",
+            "Datum",
+            "Dimensi",
+            "Gudang 1",
+            "Pagar depan",
+            "Pintu Gudang 1",
+            "Pondasi",
+            "Struktur",
+            "Tapak"
+          ],
+          "mode": "cad",
+          "ready": true,
+          "sheet": "derived-section-b",
+          "svgPaths": 46,
+          "viewBox": [
+            -35.29715900052088,
+            78.51851563961418,
+            1270.5942988637794,
+            690.9629629629629
+          ],
+          "zoom": 1.35
+        }
+      }
+    },
+    "keyboard": {
+      "result": {
+        "type": "object",
+        "value": {
+          "errors": [],
+          "hiddenLayers": [],
+          "layers": [
+            "Anotasi",
+            "Atap",
+            "Datum",
+            "Dimensi",
+            "Gudang 1",
+            "Pagar depan",
+            "Pintu Gudang 1",
+            "Pondasi",
+            "Struktur",
+            "Tapak"
+          ],
+          "mode": "cad",
+          "ready": true,
+          "sheet": "derived-section-b",
+          "svgPaths": 46,
+          "viewBox": [
+            -120.42696745576296,
+            -42.400000000000034,
+            1715.3023034661023,
+            932.8
+          ],
+          "zoom": 1
+        }
+      }
+    },
+    "mobile": {
+      "result": {
+        "type": "object",
+        "value": {
+          "errors": [],
+          "height": 938,
+          "overflow": false,
+          "pinchAfter": 1.5000000000000002,
+          "pinchBefore": 1,
+          "ready": true,
+          "width": 434
+        }
+      }
+    },
+    "print": {
+      "result": {
+        "type": "object",
+        "value": {
+          "cleaned": true,
+          "invoked": true,
+          "sourceLabel": true,
+          "svg": true
+        }
+      }
+    },
+    "wheel": {
+      "result": {
+        "type": "object",
+        "value": {
+          "after": 1.2840254166877416,
+          "before": 1,
+          "errors": []
+        }
+      }
+    }
+  },
+  "touch": "Synthetic pointer sequence with pointer capture temporarily stubbed and restored; no physical phone tested",
+  "print": "Print assembly tested; native print dialog not opened"
+}

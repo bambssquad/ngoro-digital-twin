@@ -1,0 +1,26 @@
+{
+  "sheets": 12,
+  "source_unchanged": true,
+  "entities": {
+    "entities": 5053,
+    "dimensions": 204,
+    "model_types": {
+      "LWPOLYLINE": 689,
+      "DIMENSION": 204,
+      "MTEXT": 187,
+      "INSERT": 144,
+      "LINE": 3651,
+      "CIRCLE": 26,
+      "HATCH": 6,
+      "XLINE": 7,
+      "ARC": 103,
+      "POINT": 36
+    },
+    "paper_layouts": {
+      "Layout1": 0,
+      "Layout2": 0
+    },
+    "omitted": "7 infinite construction XLINE objects omitted; hidden and non-plot layers follow renderer visibility"
+  },
+  "svg_bytes": 5580616
+}

@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "sheets": [
+    {
+      "id": "source-all",
+      "bytes": 2298800,
+      "layers": 16,
+      "passed": true
+    },
+    {
+      "id": "source-site",
+      "bytes": 51725,
+      "layers": 2,
+      "passed": true
+    },
+    {
+      "id": "source-layout",
+      "bytes": 67198,
+      "layers": 3,
+      "passed": true
+    },
+    {
+      "id": "source-foundation",
+      "bytes": 1316754,
+      "layers": 6,
+      "passed": true
+    },
+    {
+      "id": "source-columns",
+      "bytes": 525070,
+      "layers": 6,
+      "passed": true
+    },
+    {
+      "id": "source-roof",
+      "bytes": 397852,
+      "layers": 8,
+      "passed": true
+    },
+    {
+      "id": "source-frame",
+      "bytes": 264731,
+      "layers": 10,
+      "passed": true
+    },
+    {
+      "id": "derived-plan",
+      "bytes": 45876,
+      "layers": 16,
+      "passed": true
+    },
+    {
+      "id": "derived-front",
+      "bytes": 288628,
+      "layers": 19,
+      "passed": true
+    },
+    {
+      "id": "derived-side",
+      "bytes": 300264,
+      "layers": 19,
+      "passed": true
+    },
+    {
+      "id": "derived-section-a",
+      "bytes": 15306,
+      "layers": 11,
+      "passed": true
+    },
+    {
+      "id": "derived-section-b",
+      "bytes": 8412,
+      "layers": 10,
+      "passed": true
+    }
+  ],
+  "source_unchanged": true,
+  "model_unchanged": true,
+  "app_change": "Only pause hidden Three.js rendering and reset FPS measurement during CAD mode",
+  "browser_passed": true
+}

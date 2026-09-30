@@ -3,12 +3,30 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#eae8df"><meta name="description" content="Eksplorasi 3D kawasan NGORO berdasarkan gambar DWG. Tiga gudang, kantor dua lantai, sosoran dan tapak.">
- <title>NGORO — Eksplorasi 3D</title><link rel="stylesheet" href="style.css">
+ <title>NGORO — Eksplorasi 3D & Gambar Teknik</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="drawings.css">
  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
 </head>
 <body>
  <main id="viewport" aria-label="Model tiga dimensi kawasan NGORO"><canvas id="scene" aria-label="Model 3D. Seret untuk memutar, gulir untuk memperbesar." tabindex="0"></canvas></main>
  <header><a class="brand" href="./" aria-label="NGORO tampilan awal"><span class="monogram">N<span>°</span></span><span>NGORO<small>INDUSTRIAL ESTATE</small></span></a><div class="project-meta"><span>STUDI ARSITEKTUR</span><span>90 × 80 M <i></i> 03 GUDANG</span></div><button id="info" class="circle" aria-label="Informasi model">i</button></header>
+ <nav class="workspace-tabs" aria-label="Mode tampilan"><button data-workspace="3d" aria-pressed="true">Model 3D</button><button data-workspace="cad" aria-pressed="false">CAD 2D</button><button data-workspace="sheets" aria-pressed="false">Gambar Teknik</button></nav>
+ <section id="drawing-workspace" hidden aria-label="Viewer CAD dan gambar teknik">
+  <aside class="drawing-sidebar">
+   <div class="drawing-heading"><span>ARSIP GAMBAR</span><button id="drawing-panel" aria-label="Buka atau tutup daftar gambar" aria-expanded="true">−</button></div>
+   <div id="drawing-options">
+    <label for="drawing-kind">Sumber gambar</label><select id="drawing-kind"><option value="source">CAD asli · dari DWG</option><option value="derived">Turunan model · revisi 04</option></select>
+    <label for="drawing-sheet">Pilih gambar</label><select id="drawing-sheet"></select>
+    <p id="drawing-description"></p>
+    <details id="drawing-layers"><summary>Layer <span id="layer-count"></span></summary><div class="layer-actions"><button id="layers-all">Semua</button><button id="layers-none">Kosongkan</button></div><div id="layer-list"></div></details>
+    <a id="drawing-download" download>Unduh gambar SVG ↗</a><a href="downloads/NGORO.source.dwg" download>Unduh DWG sumber ↗</a>
+    <p class="drawing-disclaimer">Gambar asli tetap sesuai sumber. Gambar turunan mengikuti model revisi 04 dan merupakan studi visual.</p>
+   </div>
+  </aside>
+  <div class="drawing-canvas-wrap"><svg id="drawing-canvas" xmlns="http://www.w3.org/2000/svg" tabindex="0" role="img" aria-label="Gambar 2D. Seret untuk geser, gulir atau cubit untuk zoom." preserveAspectRatio="xMidYMid meet"></svg><div id="drawing-message" role="status">Memuat gambar…</div></div>
+  <div class="drawing-title"><span id="drawing-badge">DWG SUMBER</span><h2 id="drawing-title">Gambar teknik</h2></div>
+  <div class="drawing-toolbar" role="group" aria-label="Navigasi gambar"><button id="drawing-minus" aria-label="Perkecil gambar">−</button><output id="drawing-zoom" aria-live="polite">100%</output><button id="drawing-plus" aria-label="Perbesar gambar">+</button><button id="drawing-fit">Muat penuh</button><button id="drawing-print">Cetak</button></div>
+  <p class="drawing-hint">SERET geser · GULIR / CUBIT zoom · HOME muat penuh</p>
+ </section>
  <section id="loading" aria-live="polite"><span class="loading-mark">N°</span><p>Menyiapkan kawasan</p><div class="track"><span id="progress"></span></div><small id="load-detail">Geometri dan material</small></section>
  <section class="view-caption" aria-live="polite"><span class="eyebrow">NGORO / <span id="view-no">01</span></span><h1 id="view-title">Keseluruhan tapak</h1><p id="view-detail">Tiga gudang. Satu kawasan.</p></section>
  <aside class="controls" aria-label="Pengaturan tampilan">
@@ -29,6 +47,6 @@
  <footer><span class="hint" id="hint">SERET untuk memutar <b>·</b> GULIR untuk zoom</span><div class="tools"><button id="reset" aria-label="Kembali ke tampilan awal">↺ <span>Reset</span></button><button id="capture" aria-label="Simpan gambar model">↗ <span>Simpan gambar</span></button><button id="fullscreen" aria-label="Layar penuh">⛶</button></div><span class="scale">BERDASARKAN NGORO.send.dwg</span></footer>
  <dialog id="details"><button class="close" aria-label="Tutup informasi">×</button><span class="eyebrow">CATATAN MODEL</span><h2>Dari gambar ke ruang.</h2><p>Denah, ukuran tapak, tiga gudang, sosoran, kantor, pos dan posisi parkir mengikuti DWG. Material, isi ruang, bukaan fasad, tangga kantor dan lanskap melengkapi studi visual ini.</p><dl><div><dt>Tapak</dt><dd>90 × 80 m</dd></div><div><dt>Gudang</dt><dd>3 × (23 × 60 m)</dd></div><div><dt>Sosoran</dt><dd>15 × 60 m</dd></div><div><dt>Kantor</dt><dd>6 × 12 m · 2 lantai</dd></div></dl><p class="muted">Bagian yang tidak ditentukan gambar merupakan interpretasi. Ukuran profil mengikuti anotasi; sambungan dan fondasi bukan dokumen perhitungan struktur.</p><a class="download" href="downloads/NGORO_Detailed_SU2023.skp" download>Unduh model SketchUp 2023 ↓</a><a class="notes-link" href="model-notes.html" target="_blank" rel="noopener">Asumsi & sumber material ↗</a></dialog>
  <section id="walk-hud" aria-label="Kontrol jelajah"><div id="joystick" aria-label="Joystick gerak sentuh"><span id="joystick-knob"></span></div><div class="walk-actions"><button id="interact" disabled>Dekati pintu · E</button><button id="exit-walk">Keluar jelajah · Esc</button><p id="walk-status" aria-live="polite">WASD / joystick · seret untuk melihat</p></div><span class="crosshair" aria-hidden="true">+</span></section>
- <script type="module" src="app.js"></script>
+ <script type="module" src="app.js"></script><script type="module" src="drawings.js"></script>
 </body></html>
 

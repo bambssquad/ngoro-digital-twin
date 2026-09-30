@@ -11,6 +11,7 @@ Model kawasan tiga gudang dari NGORO.send.dwg, dengan viewer Three.js dan file S
 - Pagar depan tembok, gerbang baja geser, pohon palm ramping, dan pos dengan atap turun ke timur.
 - Jelajah orang pertama/ketiga, karakter kotak 170 cm, tabrakan, dan joystick untuk HP.
 - Material dan tekstur lokal dengan kualitas adaptif.
+- Mode CAD 2D dan Gambar Teknik: CAD asli, denah bersih, dua tampak dan dua potongan turunan model; zoom, geser, layer dan unduhan SVG/DWG. Ada 12 tampilan vektor dengan label sumber yang jelas.
 
 ## Jalankan web lokal
 
@@ -29,6 +30,7 @@ Buka http://localhost:5186/. Web harus disajikan melalui HTTP agar modul dan ase
 - `analysis/geometry.json`: geometri sumber hasil pembacaan DWG.
 - `outputs/model-manifest.json`: parameter, sumber, dan asumsi model.
 - `verification/revision-04/`: bukti pemeriksaan geometri, SKP, dan viewer.
+- `docs/cad-viewer.md`: sumber, generator dan batas gambar 2D; `web/dist/assets/drawings/` berisi lembar vektor dan manifest.
 
 Generator scene: `python scripts/build_scene.py`. Skrip SketchUp berasal dari lingkungan produksi Windows dan memiliki lokasi proyek lokal di dalamnya; sesuaikan lokasi tersebut sebelum dijalankan pada komputer lain. File SKP siap dibuka langsung tanpa menjalankan generator.
 
@@ -39,4 +41,3 @@ Revisi 04: 9.972 elemen, file SKP dibuka ulang dengan nol solid nonmanifold. Vie
 Tekstur ambientCG memakai CC0; atribusi ada di `web/dist/assets/material-sources.json`. Lisensi Three.js ada di `web/dist/vendor/LICENSE-three.txt`.
 
 Repositori publik. Web diterbitkan ke GitHub Pages dari `web/dist` melalui `.github/workflows/pages.yml`; perubahan web pada branch `main` akan diterbitkan otomatis.
-
