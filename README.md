@@ -6,6 +6,8 @@ Model kawasan tiga gudang dari NGORO.send.dwg, dengan viewer Three.js dan file S
 
 ## Revisi terkini
 
+- [Tahap konstruksi interaktif](https://bambssquad.github.io/ngoro-digital-twin/?mode=construction): delapan tahap ilustratif, putar/jeda, scrub, dan hitungan elemen model. Bukan jadwal/BOQ terverifikasi. [Catatan](docs/construction-playback.md).
+
 - Mode Diorama malam: alas miniatur, nuansa navy, cahaya hangat, dan hujan ringan. Pilih Gaya visual → Arsitektur untuk material/cahaya asli. Lihat [catatan dan verifikasi](docs/diorama.md).
 
 - Tiga gudang, masing-masing 23 × 60 m; puncak atap 12 m dari lantai dan tepi atap sekitar 9,13 m.

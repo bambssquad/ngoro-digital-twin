@@ -70,11 +70,11 @@ test('presentation control is accessible and model/CAD navigation remains availa
 
 test('changing presentation exits walk before setting the new orbit lens', () => {
   const app=readFileSync(new URL('../web/dist/app.js',import.meta.url),'utf8');
-  const source=app.slice(app.indexOf('function setPresentation('),app.indexOf("$('presentation').onchange"));
+  const source=app.slice(app.indexOf('function setPresentation('),app.indexOf('function showConstruction('));
   const state={walkMode:'first',ready:true},camera=new T.PerspectiveCamera(58);
   const experience={setMode(mode){if(state.walkMode!=='orbit')camera.fov=32;state.walkMode=mode;}};
   const scene=new T.Scene();scene.background=new T.Color();scene.fog=new T.FogExp2();
-  const context={state,camera,controls:{},experience,scene,ground:{},sky:{},diorama:null,document:{body:{classList:{toggle(){}}}},$(){return {};},setTime(){},hemi:new T.HemisphereLight(),sun:new T.DirectionalLight(),renderer:{},dynamicLights:[],setView(){experience.setMode('orbit');}};
+  const context={state,camera,controls:{},experience,scene,ground:{material:new T.MeshStandardMaterial()},sky:{},diorama:null,construction:null,constructionGrid:null,document:{body:{classList:{toggle(){}}},querySelectorAll(){return []}},$(){return {};},setTime(){},hemi:new T.HemisphereLight(),sun:new T.DirectionalLight(),renderer:{},dynamicLights:[],setView(){experience.setMode('orbit');}};
   vm.runInNewContext(source+';setPresentation("studio",false);',context);
   assert.equal(state.walkMode,'orbit');
   assert.equal(camera.fov,42);
